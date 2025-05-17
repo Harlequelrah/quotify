@@ -5,5 +5,5 @@ class TagBaseModel(BaseModel):
     name:str=Field(example="drame")
 
 
-class MetaTagModel(BaseModel):
+class MetaTagModel(TagBaseModel):
     pass

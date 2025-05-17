@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import List, Optional
-
+from quotify.quote.meta_models import MetaQuoteModel
 from .meta_models import TagBaseModel
 
 class TagCreateModel(TagBaseModel):
@@ -21,6 +21,6 @@ class TagReadModel(BaseModel):
 
 
 class TagFullReadModel(TagReadModel):
-    pass
+    quotes : List[MetaQuoteModel]
     class Config:
         from_attributes=True
